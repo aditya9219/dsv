@@ -1,0 +1,29 @@
+<div class="films-container">
+  <div class="header">
+    <span>Films By - </span>
+    <b>&nbsp;{{actor}}</b>
+  </div>
+  <table mat-table [dataSource] = "films" class = "mat-elevation-z8">
+    <ng-container matColumnDef = "title">
+       <th mat-header-cell *matHeaderCellDef> Film Title</th>
+       <td mat-cell *matCellDef = "let element"> {{element.title}} </td>
+    </ng-container>
+    <ng-container matColumnDef = "director">
+       <th mat-header-cell *matHeaderCellDef>Directed By</th>
+       <td mat-cell *matCellDef = "let element"> {{element.director}} </td>
+    </ng-container>
+    <ng-container matColumnDef = "producer">
+       <th mat-header-cell *matHeaderCellDef>Produced By</th>
+       <td mat-cell *matCellDef = "let element"> {{element.producer}} </td>
+    </ng-container>
+    <ng-container matColumnDef = "release_date">
+       <th mat-header-cell *matHeaderCellDef>Released On</th>
+       <td mat-cell *matCellDef = "let element"> {{element.release_date}} </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef = "displayedColumns"></tr>
+    <tr mat-row *matRowDef = "let row; columns: displayedColumns;"></tr>
+ </table>
+ <div class="footer">
+  <button mat-raised-button color="accent" [mat-dialog-close]="true">Close</button>
+ </div>
+</div>

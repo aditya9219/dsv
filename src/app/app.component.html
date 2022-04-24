@@ -1,0 +1,43 @@
+<h1 style="display: inline-block; margin-left: 0.8em; text-decoration: underline;">Person Details</h1>
+
+<div class="person-details-containers" style="display: flex;">
+  <mat-card *ngFor="let pd of peopleDetails; let i = index;">
+      <mat-card-content>
+          <div class="info">
+            <span class="head">
+              Name:
+            </span>
+            <span class="value">
+              {{pd.name}}
+            </span>
+          </div>
+          <div class="info">
+            <span class="head">
+              Birthday:
+            </span>
+            <span class="value">
+              {{pd.birth_year}}
+            </span>
+          </div>
+          <div class="info">
+            <span class="head">
+              Gender:
+            </span>
+            <span class="value">
+              {{pd.gender}}
+            </span>
+          </div>
+          <div class="info">
+            <span class="head">
+              Number of films:
+            </span>
+            <span class="value">
+              {{pd.films.length}}
+            </span>
+          </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-stroked-button color="primary" (click)="showFilms(pd)">Films</button>
+      </mat-card-actions>
+  </mat-card>
+</div>

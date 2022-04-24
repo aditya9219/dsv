@@ -1,0 +1,18 @@
+.films-container {
+  display: flex;
+  flex-direction: column;
+  table {
+    margin-bottom: 1em;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    font-size: 17px;
+  }
+  .footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
